@@ -1,0 +1,36 @@
+name: App Workflow
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+
+  build:
+    runs_on: ununtu-latest
+
+    steps:
+    - name: Checkout repository
+    #  run: git clone https://github.com/VasekSvo/course-app.git .
+      uses: actions/checkout@v4
+
+    - name: Set up python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12.7'
+
+    - name: Install poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        export PATH=$HOME/.local/bin:$PATH
+
+    - name: Install dependecies
+      run: poetry run make install
+
+    - name: Linit with Flake8
+      run: poetry run make check
