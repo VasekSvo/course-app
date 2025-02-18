@@ -19,9 +19,9 @@ class LoggerSettings(BaseSettings):
     """
 
     model_config = SettingsConfigDict(
-        env_file="config/.env",
-        env_file_encoding="utf-8",
-        extra="ignore",
+        env_file='config/.env',
+        env_file_encoding='utf-8',
+        extra='ignore',
     )
 
     log_level: str
@@ -31,18 +31,15 @@ def configure_logging(log_level: str) -> None:
     """
     Configure the logging for the application.
 
-    Arg:
+    Args:
         log_level (str): The log level to be set for the logger.
-
-    Return:
-        None
     """
     logger.remove()
     logger.add(
-        "logs/app.log",
-        rotation="1 day",
-        retention="2 days",
-        compression="zip",
+        'logs/app.log',
+        rotation='1 day',
+        retention='2 days',
+        compression='zip',
         level=log_level,
     )
 

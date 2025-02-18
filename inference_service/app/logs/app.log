@@ -1,0 +1,10 @@
+2025-02-18 15:58:59.459 | INFO     | services.model_inference:load_model:47 - checking the existance of model config file at model/rf_db_v3
+2025-02-18 15:58:59.459 | INFO     | services.model_inference:load_model:59 - model rf_db_v3 exists! -> loading model configuration file
+2025-02-18 16:15:40.789 | INFO     | services.model_inference:load_model:47 - checking the existance of model config file at model/rf_db_v3
+2025-02-18 16:15:40.789 | INFO     | services.model_inference:load_model:59 - model rf_db_v3 exists! -> loading model configuration file
+2025-02-18 16:15:41.771 | INFO     | services.model_inference:load_model:47 - checking the existance of model config file at model/rf_db_v3
+2025-02-18 16:15:41.771 | INFO     | services.model_inference:load_model:59 - model rf_db_v3 exists! -> loading model configuration file
+2025-02-18 16:20:55.327 | INFO     | services.model_inference:load_model:47 - checking the existance of model config file at model/rf_db_v3
+2025-02-18 16:20:55.327 | INFO     | services.model_inference:load_model:59 - model rf_db_v3 exists! -> loading model configuration file
+2025-02-18 16:21:30.874 | INFO     | services.model_inference:load_model:47 - checking the existance of model config file at model/rf_db_v3
+2025-02-18 16:21:30.874 | INFO     | services.model_inference:load_model:59 - model rf_db_v3 exists! -> loading model configuration file
