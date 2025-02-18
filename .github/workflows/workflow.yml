@@ -34,9 +34,10 @@ jobs:
       id: poetry-cache 
       with:
         path: .venv
-        key: venv-$({  runner.os  })-$({  hashFiles('**/poetry.lock') })
+        key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
     - name: Install dependecies
+      if: steps.poetry-cache.outputs.cache-hit != 'true'
       run: poetry run make install
 
     - name: Linit with Flake8
